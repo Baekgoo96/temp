@@ -1,0 +1,67 @@
+import re
+c= input(" 숫자를 입력하세요 : ")
+p = int(re.findall([''\d+'',c)[0])
+print (p)
+
+
+def plus(a,b):
+    result = a + b
+
+def min(a,b):
+    result = a - b
+
+def multi(a,b):
+    result = a * b
+
+def div(a,b):
+    result = a / b
+
+
+
+
+import re
+c= input(" 숫자를 입력하세요 : ")
+p = re.findall('\d+',c)    ##수식에서 숫자
+q = re.findall('\D+',c)    ##수식에서 연산자
+print (p,q)
+z=len(q)
+print(z)
+for
+
+
+tmp = input()
+OP=("*", "/", "+", "-", "(", ")")
+P ={
+    "*":2,
+    "/":2,
+    "+":1,
+    "-":1,
+    ")":0
+}
+output = []
+stack = []
+
+for i in tmp:
+    if i not in OP:
+        output.append(i)
+    elif i == "(":
+        stack.append(i)
+    elif i == ")":
+        while stack !=[] and stack[-1] != "(":
+            output.append(stack.pop())
+        stack.pop()
+    else:
+        while stack !=[] and P[stack[-1]]>=P[i]:
+            output.append(stack.pop())
+        stack.append(i)
+
+while stack:
+    output.append(stack.pop())
+
+
+
+
+operator.push(i)
+
+
+3+7/2*4-2/5+((2+3/4)/(2+1))l
